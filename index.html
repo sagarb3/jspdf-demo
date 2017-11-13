@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="app">
+
+<head>
+    <link data-require="bootstrap-css@3.2.0" data-semver="3.2.0" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <!--<script src="html2canvas.min.js"></script>
+-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.33/vfs_fonts.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.4/angular.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div ng-controller="listController">
+        <button ng-click="export()">export</button>
+        <div id="content-div">
+            <div id="{{value.pageIndex}}" ng-repeat="(key, value) in employees" class="myDivClass" style="background-color:white">
+                <h1><span style="background-color: yellow">{{value.pageIndex}}</span>
+
+
+  
+
+    <div>  
+    <h1>
+    <p style="color:red"> {{value.pageHeader}}</p></h1>
+            </div>
+            <p> A variation of the ordinary lorem ipsum text has been used in typesetting since the 1960s or earlier, when it was popularized by advertisements for Letraset transfer sheets. It was introduced to the Information Age in the mid-1980s by Aldus Corporation, which employed it in graphics and word-processing templates for its desktop publishing program PageMaker.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce egestas elementum justo sed placerat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce egestas elementum justo sed placerat.</p>
+            <img alt="" src="download2.jpg" class="image-responsive" style="width: 800px;" />
+            <img src="download.png" style="width: 400px;" />
+            <h1>One more image</h1>
+            <h1>This is last line displayed in the page</h1>
+        </div>
+    </div>
+    </div>
+    <div id="pdf-content" style="display:none">
+    </div>
+</body>
+
+</html>
